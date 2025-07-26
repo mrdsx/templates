@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashStack</title>
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="h-screen flex">
+      <aside class="sidebar">
+        <span class="py-5 self-center text-xl font-semibold">
+          <span class="text-(--primary)">Dash</span>Stack
+        </span>
+        <div class="divide-y-1 divide-(--border)">
+          <section class="grid gap-2 pb-4">
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn active">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-gauge-icon lucide-gauge"
+                >
+                  <path d="m12 14 4-4" />
+                  <path d="M3.34 19a10 10 0 1 1 17.32 0" />
+                </svg>
+                Dashboard
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-grid2x2-icon lucide-grid-2x2"
+                >
+                  <path d="M12 3v18" />
+                  <path d="M3 12h18" />
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                </svg>
+                Products
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-heart-icon lucide-heart"
+                >
+                  <path
+                    d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"
+                  />
+                </svg>
+                Favorites
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-messages-square-icon lucide-messages-square"
+                >
+                  <path
+                    d="M14 9a2 2 0 0 1-2 2H6l-4 4V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2z"
+                  />
+                  <path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1" />
+                </svg>
+                Inbox
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-list-checks-icon lucide-list-checks"
+                >
+                  <path d="m3 17 2 2 4-4" />
+                  <path d="m3 7 2 2 4-4" />
+                  <path d="M13 6h8" />
+                  <path d="M13 12h8" />
+                  <path d="M13 18h8" />
+                </svg>
+                Order Lists
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-rows3-icon lucide-rows-3"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" />
+                  <path d="M21 9H3" />
+                  <path d="M21 15H3" />
+                </svg>
+                Product Stock
+              </button>
+            </div>
+          </section>
+          <section class="grid gap-2 pb-4">
+            <div class="my-3 px-8">
+              <span class="font-semibold text-sm text-neutral-700">PAGES</span>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-gift-icon lucide-gift"
+                >
+                  <rect x="3" y="8" width="18" height="4" rx="1" />
+                  <path d="M12 8v13" />
+                  <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+                  <path
+                    d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"
+                  />
+                </svg>
+                Pricing
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-calendar-days-icon lucide-calendar-days"
+                >
+                  <path d="M8 2v4" />
+                  <path d="M16 2v4" />
+                  <rect width="18" height="18" x="3" y="4" rx="2" />
+                  <path d="M3 10h18" />
+                  <path d="M8 14h.01" />
+                  <path d="M12 14h.01" />
+                  <path d="M16 14h.01" />
+                  <path d="M8 18h.01" />
+                  <path d="M12 18h.01" />
+                  <path d="M16 18h.01" />
+                </svg>
+                Calendar
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-clipboard-icon lucide-clipboard"
+                >
+                  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+                  <path
+                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  />
+                </svg>
+                To-Do
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-users-round-icon lucide-users-round"
+                >
+                  <path d="M18 21a8 8 0 0 0-16 0" />
+                  <circle cx="10" cy="8" r="5" />
+                  <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+                </svg>
+                Contact
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  version="1.1"
+                  id="Layer_1"
+                  viewBox="0 0 32 32"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <polygon
+                      points="14.993,9 26.318,7.058 26.651,9 28.68,9 27.951,4.749 3.162,9  "
+                    />
+                  </g>
+                  <rect
+                    x="3"
+                    y="11"
+                    style="
+                      fill: none;
+                      stroke: #000000;
+                      stroke-width: 2;
+                      stroke-miterlimit: 10;
+                    "
+                    width="26"
+                    height="14"
+                  />
+                  <circle
+                    style="
+                      fill: none;
+                      stroke: #000000;
+                      stroke-width: 2;
+                      stroke-miterlimit: 10;
+                    "
+                    cx="16"
+                    cy="18"
+                    r="4"
+                  />
+                  <circle cx="27.5" cy="23.5" r="2.5" />
+                  <circle cx="27.5" cy="12.5" r="2.5" />
+                  <circle cx="4.5" cy="23.5" r="2.5" />
+                  <circle cx="4.5" cy="12.5" r="2.5" />
+                </svg>
+                Invoice
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chart-column-big-icon lucide-chart-column-big"
+                >
+                  <path d="M3 3v16a2 2 0 0 0 2 2h16" />
+                  <rect x="15" y="5" width="4" height="12" rx="1" />
+                  <rect x="7" y="8" width="4" height="9" rx="1" />
+                </svg>
+                UI Elements
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-user-round-icon lucide-user-round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+                Team
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-grid3x3-icon lucide-grid-3x3"
+                >
+                  <rect width="18" height="18" x="3" y="3" rx="2" />
+                  <path d="M3 9h18" />
+                  <path d="M3 15h18" />
+                  <path d="M9 3v18" />
+                  <path d="M15 3v18" />
+                </svg>
+                Table
+              </button>
+            </div>
+          </section>
+          <section class="grid gap-2 py-4">
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings-icon lucide-settings"
+                >
+                  <path
+                    d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Settings
+              </button>
+            </div>
+            <div class="sidebar-btn-row">
+              <button class="sidebar-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-power-icon lucide-power"
+                >
+                  <path d="M12 2v10" />
+                  <path d="M18.4 6.6a9 9 0 1 1-12.77.04" />
+                </svg>
+                Logout
+              </button>
+            </div>
+          </section>
+        </div>
+      </aside>
+      <div class="w-full grid">
+        <header class="px-8 flex justify-between items-center">
+          <div class="flex items-center justify-between gap-6">
+            <div class="p-1.5 secondary-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-align-justify-icon lucide-align-justify"
+              >
+                <path d="M3 12h18" />
+                <path d="M3 18h18" />
+                <path d="M3 6h18" />
+              </svg>
+            </div>
+            <div
+              class="py-1.25 px-2 flex gap-2 rounded-full bg-neutral-100 border-1 border-(--border)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="gray"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-search-icon lucide-search"
+              >
+                <path d="m21 21-4.34-4.34" />
+                <circle cx="11" cy="11" r="8" />
+              </svg>
+              <input
+                class="outline-0"
+                type="text"
+                id="search-input"
+                placeholder="Search"
+              />
+            </div>
+          </div>
+          <div class="flex items-center gap-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-bell-dot-icon lucide-bell-dot"
+            >
+              <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+              <path
+                d="M13.916 2.314A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.74 7.327A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673 9 9 0 0 1-.585-.665"
+              />
+              <circle cx="18" cy="8" r="3" />
+            </svg>
+            <select id="language-select">
+              <option value="english">English</option>
+              <option value="german">German</option>
+            </select>
+            <div class="flex items-center gap-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-circle-user-round-icon lucide-circle-user-round"
+              >
+                <path d="M18 20a6 6 0 0 0-12 0" />
+                <circle cx="12" cy="10" r="4" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+              <div>
+                <span class="text-lg">mrdsx</span>
+                <p class="text-sm text-neutral-600">Admin</p>
+              </div>
+              <button class="secondary-btn border-1 border-(--border)">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="gray"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-chevron-down-icon lucide-chevron-down"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="p-6 flex flex-col gap-6 bg-(--bg-inner)">
+          <h1 class="font-semibold text-2xl">Dashboard</h1>
+          <div class="grid gap-4 grid-cols-4 grid-rows-1">
+            <div class="p-2 grid rounded-lg shadow-sm bg-white">
+              <span class="font-semibold text-neutral-600">Total User</span>
+              <span class="mt-1 mb-2 font-semibold text-2xl">40,689</span>
+              <div class="flex gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up-icon lucide-trending-up text-(--trending-up)"
+                >
+                  <path d="M16 7h6v6" />
+                  <path d="m22 7-8.5 8.5-5-5L2 17" />
+                </svg>
+                <span class="text-(--trending-up)">8,5%</span>
+                Up from yesterday
+              </div>
+            </div>
+            <div class="p-2 grid rounded-lg shadow-sm bg-white">
+              <span class="font-semibold text-neutral-600">Total Order</span>
+              <span class="mt-1 mb-2 font-semibold text-2xl">10293</span>
+              <div class="flex gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up-icon lucide-trending-up text-(--trending-up)"
+                >
+                  <path d="M16 7h6v6" />
+                  <path d="m22 7-8.5 8.5-5-5L2 17" />
+                </svg>
+                <span class="text-(--trending-up)">1,3%</span>
+                Up from yesterday
+              </div>
+            </div>
+            <div class="p-2 grid rounded-lg shadow-sm bg-white">
+              <span class="font-semibold text-neutral-600">Total Sales</span>
+              <span class="mt-1 mb-2 font-semibold text-2xl">$89,000</span>
+              <div class="flex gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-down-icon lucide-trending-down text-(--trending-down)"
+                >
+                  <path d="M16 17h6v-6" />
+                  <path d="m22 17-8.5-8.5-5 5L2 7" />
+                </svg>
+                <span class="text-(--trending-down)">8,5%</span>
+                Up from yesterday
+              </div>
+            </div>
+            <div class="p-2 grid rounded-lg shadow-sm bg-white">
+              <span class="font-semibold text-neutral-600">Total Pending</span>
+              <span class="mt-1 mb-2 font-semibold text-2xl">2040</span>
+              <div class="flex gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-trending-up-icon lucide-trending-up text-(--trending-up)"
+                >
+                  <path d="M16 7h6v6" />
+                  <path d="m22 7-8.5 8.5-5-5L2 17" />
+                </svg>
+                <span class="text-(--trending-up)">1,8%</span>
+                Up from yesterday
+              </div>
+            </div>
+          </div>
+          <div class="p-4 rounded-lg shadow-sm bg-white">
+            <h2 class="font-semibold text-xl mb-4">Deals Details</h2>
+            <table class="w-full">
+              <thead>
+                <tr class="bg-neutral-200 font-semibold text-left">
+                  <td class="p-2">Product Name</td>
+                  <td class="p-2">Location</td>
+                  <td class="p-2">Date - Time</td>
+                  <td class="p-2">Piece</td>
+                  <td class="p-2">Amount</td>
+                  <td class="p-2">Status</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="p-2 py-4">Apple Watch</td>
+                  <td class="p-2">6096</td>
+                  <td class="p-2">26.07.2025 - 15:32:54</td>
+                  <td class="p-2">423</td>
+                  <td class="p-2">34,295</td>
+                  <td class="p-2">
+                    <div class="deliver-status deliver-status-success">
+                      Delivered
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2">Apple Watch</td>
+                  <td class="p-2">6096</td>
+                  <td class="p-2">26.07.2025 - 15:32:54</td>
+                  <td class="p-2">423</td>
+                  <td class="p-2">34,295</td>
+                  <td class="p-2">
+                    <div class="deliver-status deliver-status-pending">
+                      Pending
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="p-2">Apple Watch</td>
+                  <td class="p-2">6096</td>
+                  <td class="p-2">26.07.2025 - 15:32:54</td>
+                  <td class="p-2">423</td>
+                  <td class="p-2">34,295</td>
+                  <td class="p-2">
+                    <div class="deliver-status deliver-status-rejected">
+                      Rejected
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

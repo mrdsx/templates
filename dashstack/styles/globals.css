@@ -1,0 +1,35 @@
+@import url("./sidebar.css");
+@import url("./sidebar-btn.css");
+@import url("./deliver-status.css");
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --primary: #4880ff;
+    --accent: #2566ff;
+    --bg-inner: #f1f4f9;
+    --border: rgb(204, 204, 204);
+    --trending-up: oklch(72.3% 0.219 149.579);
+    --trending-down: oklch(63.7% 0.237 25.331);
+  }
+
+  input[type="button"],
+  button {
+    cursor: pointer;
+  }
+
+  .secondary-btn {
+    cursor: pointer;
+    border-radius: calc(infinity * 1px);
+  }
+  .secondary-btn:hover {
+    backdrop-filter: brightness(90%);
+  }
+}

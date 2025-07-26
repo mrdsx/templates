@@ -1,0 +1,22 @@
+@layer base {
+  .deliver-status {
+    padding-block: 0.125rem;
+    padding-inline: 1rem;
+    border-radius: calc(infinity * 1px);
+    color: white;
+    text-align: center;
+    width: 8rem;
+  }
+
+  .deliver-status-success {
+    background: #00b69b;
+  }
+
+  .deliver-status-pending {
+    background: #fcbe2d;
+  }
+
+  .deliver-status-rejected {
+    background: #fd5454;
+  }
+}
